@@ -1,0 +1,10 @@
+<div class="home-dom-container">
+    <div class="user-buttons">
+        <button (click)="showDynamicComponent=!showDynamicComponent">dynamic component</button>
+    </div>
+    <div class="child-components">
+        <div *ngIf="showDynamicComponent">
+            <app-dynamic-components></app-dynamic-components>
+        </div>
+    </div>
+</div>
