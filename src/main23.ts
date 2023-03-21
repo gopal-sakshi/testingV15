@@ -23,7 +23,12 @@ const lazyLoadedRoutes23 = [
         path: 'host-directives13',
         loadComponent: () => import('../src/app/lazyRoutes12/host-directives13/host-directives13.component')
             .then (c => c.HostDirectives13Component)
-    }
+    },
+    { 
+        path: 'backend23',
+        loadComponent: () => import('../src/app/lazyRoutes12/backend23/backend23.component')
+            .then (c => c.Backend23Component)
+    }    
 ]
 
 @Component({
@@ -37,10 +42,11 @@ const lazyLoadedRoutes23 = [
   template: `
     <app-bootstrap-child1></app-bootstrap-child1>
     <app-bootstrap-child2 [input23] = "'jingChak'"></app-bootstrap-child2>
-    <a routerLink="lazy1">lazy1</a>
-    <a routerLink="lazy2">lazy2</a>
-    <a routerLink="host-directives12">host-directives12</a>
-    <a routerLink="host-directives13">host-directives13</a>
+    <a routerLink="lazy1">lazy1</a>&nbsp;&nbsp;
+    <a routerLink="lazy2">lazy2</a>&nbsp;&nbsp;
+    <a routerLink="host-directives12">host-directives12</a>&nbsp;&nbsp;
+    <a routerLink="host-directives13">host-directives13</a>&nbsp;&nbsp;
+    <a routerLink="backend23">backend23</a>&nbsp;&nbsp;
     <router-outlet></router-outlet>
   `,
 })
