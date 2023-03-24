@@ -1,13 +1,20 @@
 <div>
-    <button (click)="getDummyData()">getDummyData</button>
-    <button (click)="loginToSimpleExpressSessions()">login</button>
-    <button (click)="cookieStuff1()">cookie1</button>
-    <button (click)="cookieStuff2()">cookie2</button>
-    <button (click)="seeCookies()">seeCookies</button>
-    <button (click)="clearAllCookies()">clearAllCookies</button>
-</div>
-<div>
-    <button (click)="setCookieLocally1()">set Cookie locally1</button>
-    <button (click)="setCookieLocally2()">set Cookie locally2</button>
-    <button (click)="getLocalCookie()">get local Cookie</button>
+    <div>
+        <h3>Misc</h3>
+        <button (click)="getDummyData()">getDummyData</button>
+    </div>
+    <div>
+        <h3>Cookies </h3>
+        <button (click)="cookieStuff1()">cookie1</button>
+        <button (click)="cookieStuff2()">cookie2</button>
+        <button (click)="seeCookiesInServer()">seeCookies</button>
+        <button (click)="clearAllCookies()">clearAllCookies</button>
+        <button (click)="setCookieLocally1()">set Cookie locally1</button>
+        <button (click)="setCookieLocally2()">set Cookie locally2</button>
+        <button (click)="getCookiesInBrowser()">get Cookies</button>
+    </div>
+    <div>
+        <h3>session</h3>
+        <button (click)="loginToSimpleExpressSessions()">login</button>    
+    </div>    
 </div>

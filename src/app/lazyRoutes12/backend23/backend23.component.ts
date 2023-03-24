@@ -34,7 +34,7 @@ export class Backend23Component {
     this.httpClient.get(`${this.url24}/cookieStuff/setCookie2`, {headers: headers23, withCredentials:true}).subscribe(res => { console.log(res) });
   }
 
-  seeCookies() {
+  seeCookiesInServer() {
     this.httpClient.get(`${this.url24}/cookieStuff/seeCookies`, {withCredentials:true}).subscribe(res => { console.log(res) });
   }
   /***************************************************************************/
@@ -60,7 +60,7 @@ export class Backend23Component {
     document.cookie = `${name12}; ${expires12}; ${path12}; ${others}`;
   }
 
-  getLocalCookie() { console.log(document.cookie); }
+  getCookiesInBrowser() { console.log(document.cookie); }
 
   clearAllCookies() {
     this.httpClient.get(`${this.url24}/cookieStuff/clearCookies`, {withCredentials:true}).subscribe();
