@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () =>import('./stand-alone_comp/admin-routes23').then(mod => mod.ADMIN_ROUTES)
+  },
+  {
+    path: 'login',
+    loadComponent: () =>import('./oauth23/login24/login24.component').then(c => c.Login24Component)
   }
 ];
 

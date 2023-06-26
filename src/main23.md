@@ -10,6 +10,7 @@ change index.html           <app-root> to some other selector
 
 ## 
 change main.ts ---> main23.ts            in angular.json
+change it back to main23.ts after done
 
 ##
 you need to import Common Module in every standalone component
