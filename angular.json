@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/testing-v15",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/main23.ts",
             "polyfills": [
               "zone.js"
             ],

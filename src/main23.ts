@@ -4,15 +4,17 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { BootstrapChild1Component } from '../src/app/bootstrap44/bootstrap-child1/bootstrap-child1.component';
 import { BootstrapChild2Component } from '../src/app/bootstrap44/bootstrap-child2/bootstrap-child2.component';
+import { MatButtonModule } from '@angular/material/button';
+
 
 const lazyLoadedRoutes23 = [
-    { 
+    {   // export class LazyChild1Component
         path: 'lazy1', loadComponent: () => import('../src/app/lazyRoutes12/lazy-child1/lazy-child1.component')
             .then (c => c.LazyChild1Component)
     },
     { 
+        //  export default class LazyChild2Component --> router unwraps default imports... no need to use .then()
         path: 'lazy2', loadComponent: () => import('../src/app/lazyRoutes12/lazy-child2/lazy-child2.component')
-            .then (c => c.LazyChild2Component)
     },
     { 
         path: 'host-directives12', 
@@ -39,21 +41,16 @@ const lazyLoadedRoutes23 = [
     BootstrapChild1Component,
     BootstrapChild2Component,
  ],
-  template: `
-    <app-bootstrap-child1></app-bootstrap-child1>
-    <app-bootstrap-child2 [input23] = "'jingChak'"></app-bootstrap-child2>
-    <a routerLink="lazy1">lazy1</a>&nbsp;&nbsp;
-    <a routerLink="lazy2">lazy2</a>&nbsp;&nbsp;
-    <a routerLink="host-directives12">host-directives12</a>&nbsp;&nbsp;
-    <a routerLink="host-directives13">host-directives13</a>&nbsp;&nbsp;
-    <a routerLink="backend23">backend23</a>&nbsp;&nbsp;
-    <router-outlet></router-outlet>
-  `,
+//   template: `<div>just template babai</div>`,
+  templateUrl: './main23.html',
 })
 export class BootstrapDirectly12Component {
     jingChak:string = 'Despacito is the most viewed song on youtube... ';
 }
 const secondParam = { 
-    providers: [ importProvidersFrom(RouterModule.forRoot(lazyLoadedRoutes23)) ]
+    providers: [ 
+        importProvidersFrom(RouterModule.forRoot(lazyLoadedRoutes23)),
+        importProvidersFrom(MatButtonModule)
+    ]
 }
 bootstrapApplication(BootstrapDirectly12Component, secondParam).catch((err) => console.error(err));

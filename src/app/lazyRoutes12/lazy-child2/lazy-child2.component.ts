@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './lazy-child2.component.html',
   styleUrls: ['./lazy-child2.component.scss']
 })
-export class LazyChild2Component {
+export default class LazyChild2Component {
 
 }

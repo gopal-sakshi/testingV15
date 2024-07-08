@@ -9,5 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./bootstrap-child2.component.scss']
 })
 export class BootstrapChild2Component {
-  @Input() input23:string = ''
+  @Input() input23:string = '';
+  @Input() input24:string= '';
 }

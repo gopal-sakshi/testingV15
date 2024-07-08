@@ -6,7 +6,11 @@ import { Highlight12Directive } from 'src/app/directives23/highlight12.directive
   selector: 'app-host-directives13',
   templateUrl: './host-directives13.component.html',
   styleUrls: ['./host-directives13.component.scss'],
-  hostDirectives: [Highlight12Directive, Border12Directive],
+  hostDirectives: [
+    Border12Directive,
+    { directive: Highlight12Directive, inputs: ['color23: brown'], outputs: ['eventEmitted23'] } 
+    // it seems, we cant give inputs, outputs at this moment... github issue is pending
+  ],
   standalone: true
 })
 export class HostDirectives13Component {
@@ -15,8 +19,13 @@ export class HostDirectives13Component {
     public border: Border12Directive) {}
 
   ngOnInit() {
-    this.highlight.color23 = 'yellow';
-    this.border.color24 = 'red';    
+    // here we can give inputs -------> but not in "hostDirectives" property
+    this.highlight.color23 = 'grey';
+    this.border.color24 = 'black';    
+  }
+
+  eventEmitted23(event:any) {
+    console.log("event emitted rcvd @ component ", event);
   }
 
 }

@@ -6,10 +6,8 @@ Since we want to bootstrap a standalone component we use `bootstrapApplication` 
 Add CommonModule & RouterModule to imports array of standalone component
 
 ## 
-change index.html           <app-root> to some other selector
-
-## 
 change main.ts ---> main23.ts            in angular.json
+change index.html           <app-root> to some other selector
 change it back to main23.ts after done
 
 ##
